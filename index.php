@@ -32,7 +32,7 @@
       <section class="hero-cover">
         <img
           class="image-block__hero"
-          src="asset/img/MAIN/hero-main.png"
+          src="asset/img/MAIN/hero-main.webp"
           alt=""
           draggable="false"
         />
@@ -86,7 +86,7 @@
           <div class="carousel-inner">
             <div class="carousel-item active">
               <img
-                src="asset/img/G800/v_g800_a_mkt_007_Desktop.jpg"
+                src="asset/img/G800/v_g800_a_mkt_007_Desktop.webp"
                 class="d-block w-100"
                 alt="Slide 1"
                 data-bs-interval="3000"
@@ -95,7 +95,7 @@
             </div>
             <div class="carousel-item">
               <img
-                src="asset/img/G700/post_d_g700_g_print_00033_desktop.jpg"
+                src="asset/img/G700/post_d_g700_g_print_00033_desktop.webp"
                 class="d-block w-100"
                 alt="Slide 2"
                 data-bs-interval="3000"
@@ -104,7 +104,7 @@
             </div>
             <div class="carousel-item">
               <img
-                src="asset/img/G400/post_v_g400_a_mkt_008_desktop.jpg"
+                src="asset/img/G400/post_v_g400_a_mkt_008_desktop.webp"
                 class="d-block w-100"
                 alt="Slide 3"
                 data-bs-interval="5000"
@@ -143,7 +143,7 @@
             <div class="col-md-6 order-md-5 container-img text-md-end">
               <div class="container-img text-lg-end">
                 <img
-                  src="asset/img/G800/Cabin_R6__S1_Single Seat_Desktop.jpg"
+                  src="asset/img/G800/Cabin_R6__S1_Single Seat_Desktop.webp"
                   alt="Image Alt Text"
                   draggable="false"
                 />
@@ -170,7 +170,7 @@
             <div class="col-md-6 order-md-2 container-img">
               <div class="container-img text-lg-end">
                 <img
-                  src="asset/img/G800/Cabin_R10__S1_FWD-AFT_Desktop.jpg"
+                  src="asset/img/G800/Cabin_R10__S1_FWD-AFT_Desktop.webp"
                   alt="Another Image Alt Text"
                   draggable="false"
                 />
@@ -196,7 +196,7 @@
             <div class="col-md-6 order-md-5 container-img text-md-end">
               <div class="container-img text-lg-end">
                 <img
-                  src="asset/img/G800/Cabin_R6__S1_Single Seat_Desktop.jpg"
+                  src="asset/img/G800/Cabin_R6__S1_Single Seat_Desktop.webp"
                   alt="Image Alt Text"
                   draggable="false"
                 />
