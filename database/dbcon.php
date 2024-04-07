@@ -16,10 +16,10 @@ use Kreait\Firebase\ServiceAccount;
 
 
 
-$baseStorageUrl = 'https://firebasestorage.googleapis.com/v0/b/aviator-a150a.appspot.com/o/images%2F';
+$baseStorageUrl = 'https://firebasestorage.googleapis.com/v0/b/your-project-name.appspot.com';//replace with the storage url
 // Firebase credentials
-$firebaseCredentialPath ='DATABASE/aviator-a150a-firebase-adminsdk-lhv3p-8bfc4c3fc4.json';
-$firebaseDatabaseUri = 'https://aviator-a150a-default-rtdb.firebaseio.com';
+$firebaseCredentialPath ='DATABASE/__path to json__';
+$firebaseDatabaseUri = ')(https://(link)rtdb.firebaseio.co))';//replace with your project link
 
 // Firebase initialization using Factory
 $firebase = (new Factory())
