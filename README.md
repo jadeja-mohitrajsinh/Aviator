@@ -113,7 +113,7 @@ If you'd like to contribute to Aviator, fork the project on GitHub and submit a 
 
 ## License
 
-Aviator is licensed under the MIT license. See [LICENSE.txt](LICENSE) for more information.
+Aviator is licensed under the MIT license. See [LICENSE](LICENSE) for more information.
 
 ---
 
