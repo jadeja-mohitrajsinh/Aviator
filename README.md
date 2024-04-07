@@ -27,19 +27,13 @@ Aviator is designed to revolutionize the luxury private jets market by offering 
 To get started with Aviator, follow these simple steps:
 
 ### Installation:
-
-1. Clone this repository to your local machine.
-2. Ensure you have PHP installed on your system.
-3. Install Composer if not already installed. Visit [Composer's website](https://getcomposer.org/) for installation instructions.
-4. Run Composer to install dependencies:
-
-   ```
-   composer install
-   ```
-
-5. Set up a Firebase project and Firestore database.
-6. Copy the necessary Firebase credentials to your project. Ensure you have the appropriate permissions set up.
-7. Set up Kreait/Firebase PHP SDK in your project. Visit the [Kreait/Firebase PHP SDK GitHub page](https://github.com/kreait/firebase-php) for detailed instructions.
+Installation:
+Clone this repository to your local machine.
+Ensure you have PHP installed on your system.
+Set up a Firebase project and Firestore database.
+Copy the necessary Firebase credentials to your project. Ensure you have the appropriate permissions set up.
+Visit the Kreait/Firebase PHP SDK GitHub page and follow the installation instructions provided there. Typically, you would download the SDK and include it in your project manually.
+Once the SDK is downloaded and included in your project, configure it with your Firebase credentials..
 
 ### Running the App:
 
