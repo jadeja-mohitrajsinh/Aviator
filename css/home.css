@@ -1,0 +1,196 @@
+*{
+  user-select: none;
+}
+.head-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px;
+  top:10vh;
+  background-color: #EADBC8;
+}
+
+/* Styles for welcome-message */
+#welcome-message {
+  font-size: 1.5rem;
+  margin-top:10vh;
+  color: #0f2c59;
+}
+
+#Apply {
+  background-color: #0f2c59;
+}
+
+#Reset {
+  background-color: #dac0a3;
+  border-color: transparent;
+  color: #0f2c59;
+}
+
+#cart-btn{
+  background-color: #0f2c59 !important;
+  color: #EADBC8;
+  border-color: transparent;
+
+}
+.card-body{
+  background-color: #F8F0E5!important;
+  color : #0f2c59 !important;
+  font-family: kanit;
+  height: 100%;
+}
+.left-sidebar {
+  max-width: 30%;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding: 20px;
+  overflow-y: auto; /* Add scrollbar if content overflows */
+  background-color: #EADBC8!important;
+}
+
+.left-sidebar h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.sorting-attributes {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sorting-attributes li {
+  margin-bottom: 10px;
+}
+.left-accordion {
+  width: 23%;
+  min-height: 100vh;
+  position: fixed;
+  top: 60px; /* Adjusted to account for navbar height */
+  left: 0;
+  padding: 20px;
+  overflow-y: auto; /* Add scrollbar if content overflows */
+}
+.sidebar-btn {
+  margin-top: 50vh;
+  transform: rotate(-90deg);
+  position: fixed;
+  margin-left: -2.5vh;
+  background-color: #0f2c59!important;
+  z-index: 9999;
+}
+.search-container {
+  position: absolute;
+  top: 10vh;
+  right: 20px;
+  display: flex;
+  align-items: center; 
+  background-color: #0f2c59;
+  border-radius: 5px;
+}
+.search-container input[type=text] {
+  padding: 10px;
+  border-radius: 5px 0 0 5px;
+  font-size: 16px;
+  width: 50vh;
+}
+
+.search-container button {
+  padding: 10px;
+  border: none;
+  background-color: #0f2c59;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+form{
+  width: fit-content;
+  flex:auto;
+  flex-direction: row;
+  display: flex;
+}
+.offcanvas-body .accordion-body{
+  background-color: #EADBC8!important;
+}
+.accordion-button{
+  background-color: #F8F0E5!important;
+  color: #EADBC8;
+}
+select{
+  background-color: #0f2c59!important;
+  color: #EADBC8;
+  border-radius: 5px;
+
+}
+.card-img-wrapper {
+  padding: 10px;
+  border:none !important;
+  box-shadow: none;
+}
+.card-img {
+  width: 100%;
+  height: 37vh;
+}
+
+.product-sp{
+margin-top: 6vh;
+}
+.card-img-wrapper{
+  background-color: #0f2c59;
+}
+/* For smaller devices, adjust sidebar width and position */
+@media (max-width: 991.98px) {
+  .head-container {
+    flex-direction: column; /* Stack elements vertically */
+    align-items: stretch; /* Stretch items to full width */
+}
+
+#welcome-message {
+    display: none;;
+}
+
+  .left-sidebar {
+    width: 100%;
+    min-height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1040; /* Ensure the sidebar appears above the backdrop */
+    padding: 20px;
+    overflow-y: auto; /* Add scrollbar if content overflows */
+    background-color: #0f2c59;
+    transform: translateX(-100%); /* Initially hide the sidebar off-screen */
+    transition: transform 0.3s ease-in-out; /* Add smooth transition */
+  }
+
+  /* Adjust the accordion width to fill the entire screen */
+  .left-accordion {
+    width: 100%;
+    position: relative; /* Adjust position relative to parent container */
+    top: 0; /* Remove the fixed positioning */
+    padding: 20px;
+    overflow-y: auto; /* Add scrollbar if content overflows */
+  }
+
+  /* Show the sidebar when offcanvas is open */
+  .offcanvas.show .left-sidebar {
+    transform: translateX(0);
+  }
+  .search-container {
+    top: 10vh;
+    right: 10px;
+    width: 90%; 
+    align-items: center;
+  }
+  
+  .search-container input[type=text] {
+    width: 100%; 
+  }
+  .product-sp{
+    margin-top: 15vh;
+    }
+}

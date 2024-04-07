@@ -1,8 +1,13 @@
+.body{
+  margin : 0;
+}
 nav {
   margin: 0;
   padding: 0;
   font-family: kanit;
   z-index: 100;
+  position: fixed;
+  top: 0;
 }
 
 
@@ -10,7 +15,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #F8F0E5;
+  background-color: #F8F0E5 !important;
   position: fixed;
   width: 100%;
   z-index: 100;
@@ -106,7 +111,7 @@ nav {
   display: block;
   padding: 12px 24px;
   color: #333;
-  font-family: "Roboto", sans-serif;
+  font-family: Kanit;
   font-size: 20px;
   font-weight: 600;
   text-decoration: none;
@@ -115,6 +120,7 @@ nav {
 
 .menu__item:hover {
   background-color: #cfd8dc;
+  color: #000000 ;
 }
 
 .menu__logo {
@@ -128,4 +134,22 @@ nav {
   width: auto;
   justify-content: center;
   margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .menu__logo {
+    height: 30px;
+  }
+
+  .menu__btn {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    left: 20px;
+    width: 26px;
+    height: 26px;
+    cursor: none;
+    top: 2vh;
+    z-index: 1;
+  }
 }

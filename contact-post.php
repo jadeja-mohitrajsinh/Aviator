@@ -1,6 +1,6 @@
 <?php
 
-include 'database/dbcon.php';
+include 'database\dbcon.php';
 function handleFormSubmission($data) {
     global $database;
 

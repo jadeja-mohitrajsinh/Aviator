@@ -1,0 +1,119 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+#cart {
+    max-width: 960px;
+    width: 100%;
+
+    box-sizing: border-box;
+}
+
+.container-fluid {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.col-12, .col-sm-8, .col-sm-4 {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.items {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.proceed {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.btn-primary {
+    background-color: #0F2C59 !important;
+    border-color: #0F2C59!important;
+}
+
+.btn-primary:hover {
+    background-color: #DAC0A3!important;
+    border-color: #DAC0A3!important;
+    color: #0F2C59!important;
+}
+
+.btn-primary:focus,
+.btn-primary.focus {
+    color: #0F2C59!important;
+    background-color: #F8F0E5!important;
+    border-color: #F8F0E5!important;
+    box-shadow: none   !important;
+}
+
+@media screen and (max-width: 768px) {
+    .cart {
+        padding: 0!important;
+    }
+    .cartItem {
+        min-height: 150px;
+        padding: 15px; 
+        margin-bottom: 20px;
+    }
+    
+    .cartItem img {
+        max-height: 100px; 
+        width: auto; 
+    }
+    
+    .cartItem h6 {
+        font-size: 18px;
+        margin-bottom: 5px; 
+    }
+    
+    .cartItem p {
+        font-size: 16px;
+        margin-bottom: 3px;
+    }
+    
+    .cartItemPrice {
+        font-size: 16px; 
+        margin-top: 10px; 
+        right: 2vh !important;
+    }
+
+}
+/* CSS for larger screens (laptops) */
+@media screen and (min-width: 992px) {
+    /* Increase the height of cart items */
+    .cartItem {
+        padding: 20px; /* Adjust padding as needed */
+    }
+
+    /* Increase the font size of product details */
+    .cartItem h6,
+    .cartItem p {
+        font-size: 20px; /* Increase font size */
+    }
+
+    /* Increase the font size of cart item price */
+    .cartItemPrice {
+        font-size: 24px; /* Increase font size */
+    }
+
+    /* Make images larger */
+    .cartItem img {
+        width: 400px; /* Adjust image width as needed */
+        height: auto; /* Maintain aspect ratio */
+    }
+}

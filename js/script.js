@@ -1,13 +1,25 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Get the loginLink element
-    var loginLink = document.querySelector(".menu__login a");
+        var loginLink = document.querySelector(".menu__login a");
 
-    // Check if the page URL contains "login.php"
-    if (window.location.href.indexOf("login.php") !== -1) {
-        // If it is the login page, update the link to go back
-        loginLink.textContent = "Back";
-        loginLink.href = "index.php"; // Update the href to the desired back link URL
-    }
+        if (window.location.href.indexOf("login.php") !== -1) {
+            loginLink.textContent = "BACK";
+            loginLink.href = "index.php";
+        }
+    
+        // Check if the page URL contains "index.php"
+        if (window.location.href.indexOf("home.php") !== -1) {
+            loginLink.textContent = "CART";
+            loginLink.href = "cart.php";
+        }
+        if (window.location.href.indexOf("cart.php") !== -1) {
+            loginLink.textContent = "BACK";
+            loginLink.href = "home.php";
+        }
+           if (window.location.href.indexOf("cart.php") !== -1) {
+            loginLink.textContent = "HOME";
+            loginLink.href = "home.php";
+        }
+    
 
     const container = document.querySelector(".container");
 
@@ -20,5 +32,10 @@ document.addEventListener("DOMContentLoaded", function () {
             container.classList.remove("sign-up-mode");
         }
     });
+    
 
 });
+
+
+
+

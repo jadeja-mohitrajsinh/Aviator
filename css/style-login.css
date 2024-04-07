@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
 
 * {
   margin: 0;
@@ -24,7 +24,7 @@
 
 body,
 input {
-  font-family: "Poppins", sans-serif;
+  font-family: Kanit;
 }
 
 /* .container {
@@ -152,7 +152,7 @@ form.sign-in-form {
   position: absolute;
   height: 2000px;
   width: 2000px;
-  top: -10%;
+  top: 1rem;
   right: 48%;
   transform: translateY(-50%);
   background-image: linear-gradient(-45deg, #0f2c59 0%, #094297 100%);
@@ -363,7 +363,7 @@ form.sign-in-form {
 
 @media (max-width: 570px) {
   form {
-    padding: 0 1.5rem;
+    padding: 130px 1.5rem;
   }
 
   .image {

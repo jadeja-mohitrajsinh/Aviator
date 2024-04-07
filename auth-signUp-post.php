@@ -1,6 +1,6 @@
 <?php
 session_start();
-include 'database/dbcon.php'; // Include your Firebase setup file
+include 'database/dbcon.php';
 
 if (isset($_POST['Submit-SignUp'])) {
     $signUpUserName = $_POST['signUpUsername'];
@@ -28,9 +28,9 @@ if (isset($_POST['Submit-SignUp'])) {
         header('Location: login.php');
         exit;
     } catch (\Kreait\Firebase\Exception\Auth\UserNotFound $e) {
-        // User not found, proceed with user creation
     }
 
+    // Create an array with user properties including the display name
     $userProperties_signup = [
         'email' => $signUpEmail,
         'password' => $signUpPassword,
@@ -38,10 +38,13 @@ if (isset($_POST['Submit-SignUp'])) {
     ];
 
     try {
-        $createdUser = $auth->createUserWithEmailAndPassword($signUpEmail, $signUpPassword);
-
+        // Create the user with email, password, and display name
+        $createdUser = $auth->createUser($userProperties_signup);
+    
         if ($createdUser) {
             $_SESSION['status'] = "User Created Successfully. Please log in.";
+            $_SESSION['email'] = $signUpEmail;
+            $_SESSION['start'] = true;
             header('Location: home.php');
             exit;
         } else {

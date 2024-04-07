@@ -19,10 +19,12 @@ if(isset($_POST['Submit-SignIn'])){
         $idTokenString = $signInResult->idToken();
 
         // Handle successful sign-in
-        $_SESSION['idTokenString'] = $idTokenString;
+
         $_SESSION['status'] = "User signed in successfully";
         header('Location: home.php');
+        $_SESSION['email'] = $email;
         $_SESSION['logged_in'] = true;
+        $_SESSION['start'] = true;
         exit;
     } catch (\Kreait\Firebase\Exception\Auth\UserNotFound $e) {
         // Handle user not found

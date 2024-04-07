@@ -1,5 +1,5 @@
 <?php
-// PHP form validation logic
+
 $nameErr = $emailErr = $messageErr = "";
 $name = $email = $message = "";
 
@@ -15,13 +15,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   } else {
     $email = test_input($_POST["email"]);
   }
-  // Add more validation rules as needed
-  // If there are no validation errors, you can proceed with further processing or database insertion.
-  // For simplicity, I'm just echoing the values in this example.
   if (empty($nameErr) && empty($emailErr)) {
     echo "Name: $name<br>";
     echo "Email: $email<br>";
-    // Add further processing or database insertion here if needed
   }
 }
 function test_input($data) {
@@ -31,7 +27,11 @@ function test_input($data) {
   return $data;
 }
 ?>
-<scripr src="contact-post"></script>
+<head>
+<link rel="stylesheet" href="../css/style.css">
+
+</head>
+<script src="contact-post"></script>
     <section class="contact">
         <div class="background">
             <div class="container-login">
