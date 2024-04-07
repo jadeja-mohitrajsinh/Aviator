@@ -110,8 +110,9 @@ Once Aviator is deployed, follow these steps to start exploring luxury private j
 
 3. **Connect with Sellers:** Use Aviator's built-in communication features to connect with sellers directly. Discuss details, negotiate prices, and finalize transactions with ease.
 
-4. **Stay Updated:** Keep track of your favorite listings and receive notifications about new arrivals
-## Contributing
+4. **Stay Updated:**  Keep track of your favorite listings and receive notifications about new arrivals or price changes.
+
+
 
 If you'd like to contribute to Aviator, fork the project on GitHub and submit a pull request. We welcome ideas and collaborations to make Aviator the ultimate destination for luxury private jet enthusiasts.
 
