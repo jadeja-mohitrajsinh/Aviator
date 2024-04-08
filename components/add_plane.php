@@ -165,8 +165,10 @@
                         <!-- Image Upload Section -->
                         <h2>Upload Image</h2>
                         <div class="form-group">
-                            <label for="image">Upload Image:</label>
+                        <label for="image">Upload Image:</label>
                             <input type="file" id="image" name="image" class="form-control-file" required>
+                        </div> <label for="image">Upload Image:</label>
+                            <input type="file" id="image-overhead" name="image-overhead" class="form-control-file" required>
                         </div><br>
 
 

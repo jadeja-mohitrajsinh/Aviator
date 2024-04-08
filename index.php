@@ -138,7 +138,7 @@
             <div class="row">
                 <div class="col-md-6 order-md-5 container-img text-md-end">
                     <div class="container-img text-lg-end">
-                        <img src="asset/img/G700/d_g700_flightdeck_print_00003_PROD.webp" alt="Image Alt Text"
+                        <img src="asset\img\G800\v_g700_flightdeck_mkt_002_Desktop.webp" alt="Image Alt Text"
                             draggable="false" />
                     </div>
                 </div>

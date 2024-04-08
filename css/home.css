@@ -141,7 +141,13 @@ margin-top: 6vh;
 }
 .card-img-wrapper{
   background-color: #0f2c59;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%; /* Ensure the wrapper fills the height of the card */
 }
+
+
 /* For smaller devices, adjust sidebar width and position */
 @media (max-width: 991.98px) {
   .head-container {

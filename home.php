@@ -111,45 +111,53 @@ if(isset($_GET['add_to_cart']) && isset($_GET['aircraft_id'])) {
             <div class="row" id="product-container">
                 <?php
 foreach ($aircrafts as $aircraftId => $aircraft) {
-    // Extract aircraft data
+    
+    $imageUrlOverhead = '';
     $manufacturer = $aircraft['manufacturer'];
     $model = $aircraft['model'];
     $price = $aircraft['price'];
     $imageUrl = str_replace('images/', '', $aircraft['image']); 
     $imageUrl = $baseStorageUrl . urlencode($imageUrl) . '?alt=media';
-    $features = $aircraft['cockpitFeatures'];
+    $features = $aircraft['cockpitFeatures']; 
+    if (isset($aircraft['images-overhead'])) {
+        $imageUrlOverhead = str_replace('images/', '', $aircraft['images-overhead']);
+        $imageUrlOverhead = $baseStorageUrl . urlencode($imageUrlOverhead) . '?alt=media';
+    } else {
+        // Set $imageUrlOverhead to null or an appropriate default value if 'images-overhead' is not set
+        $imageUrlOverhead = ''; // Or any other default value you prefer
+    }
 
     // Generate unique modal ID for each product
     $modalId = 'infoModal_' . $aircraftId;
 ?>
 
-                <div class="col-md-6 card-color">
-                    <div class="card mb-4">
-                        <div class="row no-gutters">
-                            <div class="col-md-6 card-img-wrapper p-3">
-                                <img src="<?php echo $imageUrl; ?>" class="card-img" alt="Airplane Image">
-                            </div>
-                            <div class="col-md-6">
-                                <div class="card-body">
-                                    <h5 class="card-title"><?php echo $manufacturer; ?></h5>
-                                    <p class="card-text">Model: <?php echo $model; ?></p>
-                                    <p class="card-text">Price: $<?php echo $price; ?></p>
-                                    <ul>
-                                        <?php foreach ($features as $feature): ?>
-                                        <li><?php echo $feature; ?></li>
-                                        <?php endforeach; ?>
-                                    </ul>
-                                    <!-- Add buttons or links as needed -->
-                                    <a href="home.php?add_to_cart=true&aircraft_id=<?php echo $aircraftId; ?>"
-                                        class="btn btn-primary mt-3 w-100" id="cart-btn">Cart</a>
-                                    <!-- Use the unique modal ID for each product -->
-                                    <a href="#" class="btn btn-primary mt-3 w-100" data-bs-toggle="modal"
-                                        data-bs-target="#<?php echo $modalId; ?>" id="cart-btn">Info</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+<div class="col-md-6 card-color">
+    <div class="card mb-4">
+        <div class="row no-gutters">
+            <div class="col-md-6 card-img-wrapper d-flex align-items-center justify-content-center">
+                <img src="<?php echo $imageUrl; ?>" class="card-img" alt="Airplane Image">
+            </div>
+            <div class="col-md-6">
+                <div class="card-body">
+                    <h5 class="card-title"><?php echo $manufacturer; ?></h5>
+                    <p class="card-text">Model: <?php echo $model; ?></p>
+                    <p class="card-text">Price: $<?php echo $price; ?></p>
+                    <ul>
+                        <?php foreach ($features as $feature): ?>
+                        <li><?php echo $feature; ?></li>
+                        <?php endforeach; ?>
+                    </ul>
+                    <!-- Add buttons or links as needed -->
+                    <a href="home.php?add_to_cart=true&aircraft_id=<?php echo $aircraftId; ?>"
+                        class="btn btn-primary mt-3 w-100" id="cart-btn">Cart</a>
+                    <!-- Use the unique modal ID for each product -->
+                    <a href="#" class="btn btn-primary mt-3 w-100" data-bs-toggle="modal"
+                        data-bs-target="#<?php echo $modalId; ?>" id="cart-btn">Info</a>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
 
                 <!-- Modal -->
                 <div class="modal fade" id="<?php echo $modalId; ?>" tabindex="-1"
@@ -163,7 +171,7 @@ foreach ($aircrafts as $aircraftId => $aircraft) {
                                     aria-label="Close"></button>
                             </div>
                             <!-- Modal Body -->
-                            <div class="modal-body" style="max-height: 70vh; overflow-y: auto;">
+                            <div class="modal-body" style="max-height: 60vh; overflow-y: auto;">
                                 <!-- Add modal body content here -->
                                 <div class="container">
                                     <div class="row">
@@ -174,17 +182,18 @@ foreach ($aircrafts as $aircraftId => $aircraft) {
                                         <div class="col-md-6">
                                             <!-- Display basic information inline -->
                                             <h1><?php echo $manufacturer; ?></h1>
-                                            <h3>Price: $<?php echo $price; ?></h3>
-                                            <!-- Add other basic information here -->
+                                            <h3>Price: $<?php echo $price; ?></h3>   
+                                        <img src="<?php echo  $imageUrlOverhead; ?>" alt="Second Aircraft Image" class="img-fluid mb-3">
+
                                         </div>
                                     </div>
                                     <div class="accordion" id="accordionDetails">
                                         <!-- Performance Section -->
                                         <div class="accordion-item">
                                             <h2 class="accordion-header" id="headingPerformance">
-                                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                                    data-bs-target="#collapsePerformance" aria-expanded="true"
-                                                    aria-controls="collapsePerformance">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#collapseWeights"
+                                                    aria-expanded="false" aria-controls="collapseWeights">
                                                     Performance
                                                 </button>
                                             </h2>

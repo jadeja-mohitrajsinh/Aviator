@@ -45,42 +45,47 @@
         }
     ?>
     <div id="cart">
-        <div class="container-fluid">
-            <div class="row align-items-start">
-                <div class="col-12 col-sm-8 items">
-                    <?php if (empty($cartItems)): ?>
+    <div class="container-fluid">
+        <div class="row align-items-start">
+            <div class="col-12 col-sm-8 items">
+                <?php if (empty($cartItems)): ?>
                     <p>Your cart is empty.</p>
-                    <?php else: ?>
-                    <?php foreach ($cartItems as $itemKey => $item): ?>
-                    <div class="cartItem row align-items-start">
-                        <div class="col-3 mb-2">
-                            <?php
+                <?php else: ?>
+                    <div class="cart-items">
+                        <?php foreach ($cartItems as $itemKey => $item): ?>
+                            <div class="cartItem row align-items-start">
+                                <div class="col-3 mb-2">
+                                    <?php
                                     $imageUrl = str_replace('images/', '', $item['image']); 
                                     $imageUrl = $baseStorageUrl . urlencode($imageUrl) . '?alt=media';
-                                ?>
-                            <img class="w-100" src="<?php echo $imageUrl; ?>" alt="Product Image">
-                        </div>
-                        <div class="col-3 mb-2">
-                            <h6 class=""><?php echo $item['manufacturer']; ?></h6>
-                            <p class="pl-1 mb-0">Model: <?php echo $item['model']; ?></p>
-                           
-                        </div>
-                        <div class="col-2">
-                            <p class="cartItemQuantity p-1 text-center">1</p>
-                        </div>
-                        <div class="col-1">
-                            <p class="cartItemPrice">$<?php echo $item['price']; ?></p>
-                        </div>
-                        <div class="col-12">
-                            <button class="btn btn-danger btn btn-primary shopnow remove-item"
-                                data-item="<?php echo $itemKey; ?>">Remove</button>
-                        </div>
+                                    ?>
+                                    <img class="w-100" src="<?php echo $imageUrl; ?>" alt="Product Image">
+                                </div>
+                                <div class="col-3 mb-2">
+                                    <h6 class=""><?php echo $item['manufacturer']; ?></h6>
+                                    <p class="pl-1 mb-0">Model: <?php echo $item['model']; ?></p>
+                                </div>
+                                <div class="col-2">
+                                    <p class="cartItemQuantity p-1 text-center">1</p>
+                                </div>
+                                <div class="col-1">
+                                    <p class="cartItemPrice">$<?php echo $item['price']; ?></p>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn btn-danger btn btn-primary shopnow remove-item"
+                                            data-item="<?php echo $itemKey; ?>">Remove
+                                    </button>
+                                </div>
+                            </div>
+                            <hr>
+                        <?php endforeach; ?>
                     </div>
-                    <hr>
-                    <?php endforeach; ?>
-                    <?php endif; ?>
-                </div>
-                <div class="col-12 col-sm-4 p-3 proceed form">
+                <?php endif; ?>
+            </div>
+        </div>
+    </div>
+</div>
+      <div class="col-12 col-sm-4 p-3 proceed form">
                     <div class="row m-0">
                         <div class="col-sm-8 p-0">
                             <h6>Subtotal</h6>

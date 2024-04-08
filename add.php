@@ -30,9 +30,9 @@ function handleFormSubmission($data, $file) {
     }
 
     // Form data handling
-//    if (empty($data['year']) || empty($data['manufacturer']) || empty($data['model']) || empty($data['engines']) || empty($data['capacity']) || empty($data['maximumMach']) || empty($data['maximumTakeoffWeight']) || empty($data['cockpitFeatures']) || empty($data['cockpitFeatures']) ||empty($data['price'])){
-//        return 'error-missing-fields';
-//    }
+    //if (empty($data['year']) || empty($data['manufacturer']) || empty($data['model']) || empty($data['engines']) || empty($data['capacity']) ||empty($data['price'])){
+     //   return 'error-missing-fields';
+   //}
 
 
     $year = $data['year'];
@@ -68,7 +68,9 @@ function handleFormSubmission($data, $file) {
     $exteriorLength = $data['exteriorLength'];
     $overallWingspan = $data['overallWingspan'];
     $image = $filePath;
+    $imageoverhead = $filePath;
     $cockpitFeatures = $data['cockpitFeatures'];
+    
 
     $aircraftData = [
         'year' => $year,
@@ -78,6 +80,7 @@ function handleFormSubmission($data, $file) {
         'engines_count' => $engines_count,
         'capacity' => $capacity,
         'image' => $image,
+        'image-overhead' => $imageoverhead,
         'price' => $price,
         'maximumRange' => $maximumRange,
         'highSpeedCruise' => $highSpeedCruise,

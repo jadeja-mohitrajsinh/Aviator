@@ -1,23 +1,26 @@
 <?php
 // reset_password.php
-use Kreait\Firebase\Factory;
-use Kreait\Firebase\Auth;
 
+// Include database connection and other necessary files
 include 'database/dbcon.php';
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST["email"];
     
     // Include Firebase PHP SDK
     require __DIR__ . '/vendor/autoload.php';
 
-
     try {
+        // Send password reset link
         $auth->sendPasswordResetLink($email);
-        echo "Password reset email sent successfully!";
+        // Return success response
+        echo json_encode(array("success" => true, "message" => "Password reset email sent successfully!"));
     } catch (\Kreait\Firebase\Exception\Auth\EmailNotFound $e) {
-        echo "Email not found!";
+        // Return error response
+        echo json_encode(array("success" => false, "message" => "Email not found!"));
     } catch (Exception $e) {
-        echo "An error occurred: " . $e->getMessage();
+        // Return error response
+        echo json_encode(array("success" => false, "message" => "An error occurred: " . $e->getMessage()));
     }
 }
 ?>

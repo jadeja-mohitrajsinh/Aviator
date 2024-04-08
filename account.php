@@ -12,8 +12,8 @@ include 'components/Nav-Bar.php';
     <title>Account Settings</title>
     <!-- Bootstrap CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/Nav-Bar.css"> <!-- Include custom CSS -->
-    <link rel="stylesheet" href="css/style.css"> <!-- Include custom CSS -->
+    <link rel="preload" href="css/Nav-Bar.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" href="css/style.css"> 
     <script src="js/script.js"></script>
     <style>
     body {
@@ -96,12 +96,13 @@ include 'components/Nav-Bar.php';
                 </form>
             </div>
         </div>
+    
         <div class="card">
             <div class="card-header">
                 Reset Password
             </div>
             <div class="card-body">
-                <form action="reset_password.php" method="POST">
+                <form id="resetPasswordForm" method="POST">
                     <div class="form-group">
                         <label for="email">Email address:</label>
                         <input type="email" class="form-control" id="email" name="email" required>
@@ -112,5 +113,31 @@ include 'components/Nav-Bar.php';
         </div>
     </div>
 </body>
+<!-- Include jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Add a button for password reset -->
+
+<!-- Script to handle password reset with AJAX -->
+<script>
+        $(document).ready(function () {
+            $('#resetPasswordForm').submit(function (event) {
+                event.preventDefault(); // Prevent form submission
+                var formData = $(this).serialize(); // Serialize form data
+                $.ajax({
+                    type: 'POST',
+                    url: 'reset_password.php',
+                    data: formData,
+                    dataType: 'json',
+                    success: function (response) {
+                        alert(response.message); // Display success message as an alert
+                    },
+                    error: function (xhr, status, error) {
+                        console.error(xhr.responseText); // Log any errors to the console
+                    }
+                });
+            });
+        });
+    </script>
 
 </html>

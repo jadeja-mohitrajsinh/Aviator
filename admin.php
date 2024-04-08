@@ -58,27 +58,28 @@
 </section>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            // Toggle section visibility based on URL hash
-            const hash = window.location.hash;
-            const sec2 = document.getElementById("sec-2");
-            if (hash === "#sec-2") {
-                sec2.style.display = "block";
-            }
-            // Add click event listener to navbar links
-            const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
-            navLinks.forEach(link => {
-                link.addEventListener("click", function(event) {
-                    const target = event.target.getAttribute("href");
-                    if (target === "#sec-1") {
-                        sec2.style.display = "none";
-                    } else if (target === "#sec-2") {
-                        sec2.style.display = "block";
-                    }
-                });
+
+    document.addEventListener("DOMContentLoaded", function() {
+        // Add click event listener to navbar links
+        const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
+        navLinks.forEach(link => {
+            link.addEventListener("click", function(event) {
+                const target = event.target.getAttribute("href");
+                const section = document.querySelector(target);
+                if (section) {
+                    // Hide all sections
+                    document.querySelectorAll("section").forEach(sec => {
+                        sec.style.display = "none";
+                    });
+                    // Show the selected section
+                    section.style.display = "block";
+                }
             });
         });
-    </script>
+    });
+</script>
+
+  
 
 </body>
 
