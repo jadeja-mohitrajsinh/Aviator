@@ -22,7 +22,7 @@ Sure, here's a step-by-step guide with scripts and explanations:
 
 1. **Clone this repository to your local machine:**
    ```
-   git clone <repository_url>
+   git clone https://github.com/king-mohitrajsinh/Aviator
    ```
    Replace `<repository_url>` with the URL of your repository.
 
