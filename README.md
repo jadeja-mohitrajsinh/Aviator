@@ -43,6 +43,7 @@ Sure, here's a step-by-step guide with scripts and explanations:
 4. **Install Firebase PHP SDK using Composer:**
    After installing Composer, navigate to your project directory in the terminal and run the following command:
    ```
+   composer install
    composer require kreait/firebase-php
    ```
 
