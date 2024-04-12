@@ -1,4 +1,4 @@
-Certainly! Here's the revised README with the additional information about the `htdocs` directory for XAMPP:
+Here's the revised README with the additional information about installing Composer and Firebase:
 
 ---
 
@@ -10,11 +10,9 @@ Welcome to Aviator, a platform dedicated to transforming the luxury private jets
 
 Aviator is designed to revolutionize the luxury private jets market by offering a sophisticated platform that caters to the needs of both buyers and sellers. Our goal is to streamline the process of buying and selling private jets, making it efficient, and transparent.
 
-
 ## Getting Started
 
 To get started with Aviator, follow these simple steps:
-
 
 ### Installation:
 
@@ -37,22 +35,35 @@ Sure, here's a step-by-step guide with scripts and explanations:
 
    Explanation: This command checks if PHP is installed on your system.
 
-3. **Set up a Firebase project and Firestore database:**
-   Go to the Firebase Console (https://console.firebase.google.com/) and create a new project. Follow the prompts to set up a Firestore database within your project.
+3. **Set up Composer:**
+   If you haven't installed Composer yet, you can download and install it from [https://getcomposer.org/download/](https://getcomposer.org/download/).
+
+   Explanation: Composer is a dependency manager for PHP, which you'll need to manage the dependencies of your project.
+
+4. **Install Firebase PHP SDK using Composer:**
+   After installing Composer, navigate to your project directory in the terminal and run the following command:
+   ```
+   composer require kreait/firebase-php
+   ```
+
+   Explanation: This command installs the Firebase PHP SDK into your project using Composer, allowing you to interact with Firebase services from your PHP code.
+
+5. **Set up a Firebase project and Firestore database:**
+   Go to the Firebase Console ([https://console.firebase.google.com/](https://console.firebase.google.com/)) and create a new project. Follow the prompts to set up a Firestore database within your project.
 
    Explanation: This step creates a new Firebase project and sets up a Firestore database, which will be used to store your data.
 
-4. **Copy the necessary Firebase credentials to your project:**
+6. **Copy the necessary Firebase credentials to your project:**
    After setting up your Firebase project, navigate to the project settings and download the service account credentials file (usually named `firebase-adminsdk.json`). Copy this file to your project directory.
 
    Explanation: This file contains the necessary credentials for your PHP application to authenticate with Firebase.
 
-5. **Visit the Kreait/Firebase PHP SDK GitHub page:**
-   Visit the GitHub page of Kreait/Firebase PHP SDK: https://github.com/kreait/firebase-php. Follow the installation instructions provided there to download the SDK.
+7. **Visit the Kreait/Firebase PHP SDK GitHub page:**
+   Visit the GitHub page of Kreait/Firebase PHP SDK: [https://github.com/kreait/firebase-php](https://github.com/kreait/firebase-php). Follow the installation instructions provided there to download the SDK.
 
    Explanation: Kreait/Firebase PHP SDK is a PHP package that allows you to interact with Firebase services from your PHP code.
 
-6. **Once the SDK is downloaded and included in your project, configure it with your Firebase credentials:**
+8. **Once the SDK is downloaded and included in your project, configure it with your Firebase credentials:**
    In your PHP code, include the Firebase PHP SDK and configure it with the service account credentials you copied earlier.
 
    ```php
@@ -80,6 +91,7 @@ Sure, here's a step-by-step guide with scripts and explanations:
 You can save this PHP script in a file (e.g., `firebase_setup.php`) and run it to configure your Firebase credentials in your project. Make sure to replace placeholders with your actual values.
 
 ### Running the App:
+
 If you're using XAMPP, you can simply access your PHP files through the `htdocs` directory without specifying a port. Here's how you can do it:
 
 1. **Start XAMPP:**
@@ -112,8 +124,6 @@ Once Aviator is deployed, follow these steps to start exploring luxury private j
 
 4. **Stay Updated:**  Keep track of your favorite listings and receive notifications about new arrivals or price changes.
 
-
-
 If you'd like to contribute to Aviator, fork the project on GitHub and submit a pull request. We welcome ideas and collaborations to make Aviator the ultimate destination for luxury private jet enthusiasts.
 
 ## License
@@ -121,5 +131,3 @@ If you'd like to contribute to Aviator, fork the project on GitHub and submit a 
 Aviator is licensed under the MIT license. See [LICENSE](LICENSE) for more information.
 
 ---
-
-Feel free to customize this template further to fit your project's specific details and requirements!
