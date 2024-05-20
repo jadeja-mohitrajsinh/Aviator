@@ -192,26 +192,26 @@ foreach ($aircrafts as $aircraftId => $aircraft) {
                                         <div class="accordion-item">
                                             <h2 class="accordion-header" id="headingPerformance">
                                                 <button class="accordion-button collapsed" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#collapseWeights"
-                                                    aria-expanded="false" aria-controls="collapseWeights">
+                                                    data-bs-toggle="collapse" data-bs-target="#collapsePerformance"
+                                                    aria-expanded="false" aria-controls="collapsePerformance">
                                                     Performance
                                                 </button>
                                             </h2>
                                             <div id="collapsePerformance" class="accordion-collapse collapse"
                                                 aria-labelledby="headingPerformance" data-bs-parent="#accordionDetails">
                                                 <div class="accordion-body">
-                                                    <p>Maximum Range: <?php echo $aircraft['maximumRange']; ?></p>
-                                                    <p>High-Speed Cruise:
+                                                    <p>Maximum Range:<br> <?php echo $aircraft['maximumRange']; ?></p>
+                                                    <p>High-Speed Cruise:<br>
                                                         <?php echo $aircraft['highSpeedCruise']; ?></p>
-                                                    <p>Long-Range Cruise:
+                                                    <p>Long-Range Cruise:<br>
                                                         <?php echo $aircraft['longRangeCruise']; ?></p>
-                                                    <p>Maximum Operating Mach:
+                                                    <p>Maximum Operating Mach:<br>
                                                         <?php echo $aircraft['maximumOperatingMach']; ?></p>
-                                                    <p>Takeoff Distance: <?php echo $aircraft['takeoffDistance']; ?>
+                                                    <p>Takeoff Distance:<br> <?php echo $aircraft['takeoffDistance']; ?>
                                                     </p>
-                                                    <p>Initial Cruise Altitude:
+                                                    <p>Initial Cruise Altitude:<br>
                                                         <?php echo $aircraft['initialCruiseAltitude']; ?></p>
-                                                    <p>Maximum Cruise Altitude:
+                                                    <p>Maximum Cruise Altitude:<br>
                                                         <?php echo $aircraft['maximumCruiseAltitude']; ?></p>
                                                 </div>
                                             </div>
@@ -229,19 +229,19 @@ foreach ($aircrafts as $aircraftId => $aircraft) {
                                             <div id="collapseWeights" class="accordion-collapse collapse"
                                                 aria-labelledby="headingWeights" data-bs-parent="#accordionDetails">
                                                 <div class="accordion-body">
-                                                    <p>Maximum Takeoff Weight:
+                                                    <p>Maximum Takeoff Weight:<br>
                                                         <?php echo $aircraft['maximumTakeoffWeight']; ?></p>
-                                                    <p>Maximum Landing Weight:
+                                                    <p>Maximum Landing Weight:<br>
                                                         <?php echo $aircraft['maximumLandingWeight']; ?></p>
-                                                    <p>Maximum Zero Fuel Weight:
+                                                    <p>Maximum Zero Fuel Weight:<br>
                                                         <?php echo $aircraft['maximumZeroFuelWeight']; ?></p>
-                                                    <p>Basic Operating Weight (including 4 crew):
+                                                    <p>Basic Operating Weight (including 4 crew):<br>
                                                         <?php echo $aircraft['basicOperatingWeight']; ?></p>
-                                                    <p>Maximum Payload: <?php echo $aircraft['maximumPayload']; ?>
+                                                    <p>Maximum Payload:<br> <?php echo $aircraft['maximumPayload']; ?>
                                                     </p>
-                                                    <p>Maximum Payload/Full Fuel:
+                                                    <p>Maximum Payload/Full Fuel:<br>
                                                         <?php echo $aircraft['maximumPayloadFullFuel']; ?></p>
-                                                    <p>Maximum Fuel: <?php echo $aircraft['maximumFuel']; ?></p>
+                                                    <p>Maximum Fuel:<br> <?php echo $aircraft['maximumFuel']; ?></p>
                                                 </div>
                                             </div>
                                         </div>
@@ -258,9 +258,9 @@ foreach ($aircrafts as $aircraftId => $aircraft) {
                                             <div id="collapseSystems" class="accordion-collapse collapse"
                                                 aria-labelledby="headingSystems" data-bs-parent="#accordionDetails">
                                                 <div class="accordion-body">
-                                                    <p>Avionics: <?php echo $aircraft['avionics']; ?></p>
-                                                    <p>Engines: <?php echo $aircraft['engines']; ?></p>
-                                                    <p>Rated Takeoff Thrust (each):
+                                                    <p>Avionics:<br> <?php echo $aircraft['avionics']; ?></p>
+                                                    <p>Engines:<br> <?php echo $aircraft['engines']; ?></p>
+                                                    <p>Rated Takeoff Thrust (each):<br>
                                                         <?php echo $aircraft['ratedTakeoffThrust']; ?></p>
                                                 </div>
                                             </div>
@@ -279,26 +279,28 @@ foreach ($aircrafts as $aircraftId => $aircraft) {
                                                 aria-labelledby="headingMeasurements"
                                                 data-bs-parent="#accordionDetails">
                                                 <div class="accordion-body">
-                                                    <p>Finished Cabin Height:
+                                                    <p>Finished Cabin Height:<br>
                                                         <?php echo $aircraft['finishedCabinHeight']; ?></p>
-                                                    <p>Finished Cabin Width:
+                                                    <p>Finished Cabin Width:<br>
                                                         <?php echo $aircraft['finishedCabinWidth']; ?></p>
-                                                    <p>Cabin Length (excluding baggage):
+                                                    <p>Cabin Length (excluding baggage):<br>
                                                         <?php echo $aircraft['cabinLength']; ?></p>
-                                                    <p>Total Interior Length:
+                                                    <p>Total Interior Length:<br>
                                                         <?php echo $aircraft['totalInteriorLength']; ?></p>
-                                                    <p>Cabin Volume: <?php echo $aircraft['cabinVolume']; ?></p>
-                                                    <p>Baggage Compartment Volume:
+                                                    <p>Cabin Volume:<br> <?php echo $aircraft['cabinVolume']; ?></p>
+                                                    <p>Baggage Compartment Volume:<br>
                                                         <?php echo $aircraft['baggageCompartmentVolume']; ?></p>
-                                                    <p>Exterior Height: <?php echo $aircraft['exteriorHeight']; ?>
+                                                    <p>Exterior Height:<br> <?php echo $aircraft['exteriorHeight']; ?>
                                                     </p>
-                                                    <p>Exterior Length: <?php echo $aircraft['exteriorLength']; ?>
+                                                    <p>Exterior Length:<br> <?php echo $aircraft['exteriorLength']; ?>
                                                     </p>
-                                                    <p>Overall Wingspan: <?php echo $aircraft['overallWingspan']; ?>
+                                                    <p>Overall Wingspan:<br><?php echo $aircraft['overallWingspan']; ?>
                                                     </p>
                                                 </div>
                                             </div>
                                         </div>
+
+
                                     </div>
                                 </div>
                             </div>
